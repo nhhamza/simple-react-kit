@@ -2,9 +2,10 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import HelloWorld from './components/hello-world/hello-world.component';
+import HelloWorld from './components/helloWorld/HelloWorld.component';
 
 describe('<App />', () => {
   const mockStore = configureStore([]);
@@ -19,7 +20,9 @@ describe('<App />', () => {
 
   const wrapper = mount(
     <Provider store={store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>,
   );
 

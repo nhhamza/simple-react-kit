@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 
-import HelloWorld from './hello-world.component';
+import HelloWorld from './HelloWorld.component';
 
 describe('<App />', () => {
   const mockStore = configureStore([]);

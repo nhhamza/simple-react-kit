@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
-import HelloWorld from './components/hello-world/hello-world.component';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Header from './components/header/Header';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+import Home from './containers/home/Home';
+import About from './containers/about/About';
+import Users from './containers/users/Users';
 
-  render() {
-    return <HelloWorld title="Hello from React webpack" />;
-  }
-}
+const App = () => (
+  <>
+    <Header />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/users" component={Users} />
+    </Switch>
+  </>
+);
 
 export default App;
