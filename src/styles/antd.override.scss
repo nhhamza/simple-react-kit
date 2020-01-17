@@ -1,0 +1,58 @@
+.ant-input-affix-wrapper .ant-input {
+  min-height: 0;
+}
+
+.ant-select {
+  width: 100%;
+}
+
+.ant-tabs .ant-tabs-top-content {
+  margin-top: -16px;
+  width: 100%;
+  background-color: white;
+  padding-top: 10px;
+  margin-left: 1px;
+}
+
+.ant-tabs-tab {
+  margin-bottom: -1px !important;
+  background-color: white !important;
+  text-align: left !important;
+  font-weight: 500;
+}
+
+.ant-table-row {
+  background-color: white;
+}
+
+.ant-modal-content {
+  width: 200%;
+  text-align: center;
+  left: -40%;
+}
+
+.ant-select-dropdown-menu-item-group-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+}
+
+.ant-input-number {
+  width: 100%;
+}
+
+.ant-select-selection__rendered {
+  line-height: initial;
+  display: flex;
+  padding: 5px;
+}
+
+.ant-select-selection--single {
+  height: initial;
+}
+
+.ant-select-selection-selected-value {
+  text-overflow: unset;
+  white-space: initial;
+}
