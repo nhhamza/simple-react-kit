@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { hot } from 'react-hot-loader/root';
-import HelloWorld from './components/hello-world';
+import HelloWorld from './components/hello-world/hello-world.component';
 
 class App extends Component {
   constructor(props) {
@@ -13,4 +12,4 @@ class App extends Component {
   }
 }
 
-export default hot(App);
+export default App;
