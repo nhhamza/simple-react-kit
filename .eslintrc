@@ -13,6 +13,7 @@
   },
   "root": true,
   "rules": {
+    "no-shadow": "off",
     "react/prefer-stateless-function": "warn",
     "react/self-closing-comp": [
       "warn",

@@ -35,7 +35,9 @@
       "^.+\\.(js|jsx)$": "babel-jest",
       ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
     },
-    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
     "moduleFileExtensions": [
       "css",
       "scss",
@@ -69,7 +71,12 @@
     "react-dom": "16.12.0",
     "react-hot-loader": "4.12.18",
     "react-router-dom": "^5.1.2",
-    "style-loader": "^1.1.2"
+    "style-loader": "^1.1.2",
+    "redux": "^4.0.4",
+    "react-redux": "^7.1.1",
+    "redux-saga": "^1.1.1",
+    "reselect": "^4.0.0",
+    "redux-logger": "^3.0.6"
   },
   "resolutions": {
     "babel-core": "7.0.0-bridge.0"
@@ -117,7 +124,7 @@
     "html-webpack-plugin": "3.2.0",
     "husky": "3.1.0",
     "identity-obj-proxy": "3.0.0",
-    "jest": "24.9.0",
+    "jest": "^24.9.0",
     "jest-css-modules-transform": "3.1.0",
     "jest-enzyme": "7.1.2",
     "jest-fetch-mock": "3.0.1",
@@ -131,9 +138,11 @@
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "postcss-loader": "^3.0.0",
     "prettier": "1.19.1",
-    "pretty-quick": "2.0.1",
     "sass-loader": "^8.0.2",
+    "pretty-quick": "2.0.1",
+    "redux-mock-store": "^1.5.3",
     "script-ext-html-webpack-plugin": "2.1.4",
+    "style-loader": "1.1.2",
     "terser-webpack-plugin": "2.3.2",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",

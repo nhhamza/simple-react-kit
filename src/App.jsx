@@ -1,15 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Header from './components/header';
-
-import Home from './containers/Home';
-import About from './containers/About';
-import Users from './containers/Users';
+import Header from './components/header/Header';
+import Home from './containers/home/Home';
+import About from './containers/about/About';
+import Users from './containers/users/Users';
 import 'antd/dist/antd.css';
-import './styles/main.scss';
-import 'antd/es/button/style/index.css';
-import 'antd/es/select/style/index.css';
-import 'antd/es/cascader/style/index.css';
 import classNames from './styles/aplication.scss';
 
 const App = () => (
