@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import t from '../../constants/translates';
 
 const Header = () => (
   <div>
     <ul>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/">{t.header.home}</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/about">{t.header.about}</Link>
       </li>
       <li>
-        <Link to="/users">Users</Link>
+        <Link to="/users">{t.header.users}</Link>
       </li>
     </ul>
   </div>

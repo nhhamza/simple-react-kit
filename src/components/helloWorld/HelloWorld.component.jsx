@@ -4,11 +4,11 @@ import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
 import { upStart, downStart } from '../../redux/up-down/up-down.actions';
 import { selectUpDownNumber } from '../../redux/up-down/up-down.selectors';
+import t from '../../constants/translates';
 
 const HelloWorld = ({ upStart, downStart, number }) => (
   <>
-    <p>Typical up down of numbers</p>
-    <h1>NUMBERS: {number}</h1>
+    <p>{t.formatString(t.counter.numbers, { number })}</p>
     <button className="button button__up" type="button" onClick={upStart}>
       +1
     </button>
