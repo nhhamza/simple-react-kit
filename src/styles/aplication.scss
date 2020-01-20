@@ -1,0 +1,58 @@
+@import './mixins';
+@import './variables';
+
+.container {
+  background-color: $bgColor;
+  padding-bottom: 30px;
+
+  .content {
+    @include background();
+
+    .containerMessage {
+      display: block;
+      justify-content: center;
+
+      .errorMessage {
+        padding: 5px;
+        margin: auto;
+        width: 80%;
+
+        .errorValues {
+          font-weight: bold;
+          color: $colorIcon;
+        }
+      }
+    }
+
+    .formContainer {
+      padding: 20px 0 0 20px;
+
+      .space {
+        padding-bottom: 5px;
+
+        .titleField {
+          font-weight: bold;
+          padding-bottom: 5px;
+        }
+      }
+    }
+
+    .positionTop {
+      display: flex;
+      justify-content: space-between;
+
+      .addApplication {
+        font-weight: bold;
+        padding-left: 20px;
+      }
+
+      .iconAdd {
+        font-size: 20px;
+        background-color: red;
+        color: white;
+        border-radius: 20px;
+        padding: 10px;
+      }
+    }
+  }
+}
