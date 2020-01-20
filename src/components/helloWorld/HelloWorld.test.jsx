@@ -9,7 +9,7 @@ describe('<App />', () => {
   const mockStore = configureStore([]);
 
   const store = mockStore({
-    subeBaja: {
+    upDown: {
       number: 0,
       isLoading: false,
       error: null,
@@ -28,15 +28,15 @@ describe('<App />', () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
-  it('should dispatch subeStart when user clicks on +1 button', () => {
-    wrapper.find('.button__sube').simulate('click');
+  it('should dispatch upStart when user clicks on +1 button', () => {
+    wrapper.find('.button__up').simulate('click');
 
-    expect(spyStoreDispatch).toHaveBeenCalledWith({ type: 'SUBE_START' });
+    expect(spyStoreDispatch).toHaveBeenCalledWith({ type: 'UP_START' });
   });
 
-  it('should dispatch subeStart when user clicks on -1 button', () => {
-    wrapper.find('.button__baja').simulate('click');
+  it('should dispatch downStart when user clicks on -1 button', () => {
+    wrapper.find('.button__down').simulate('click');
 
-    expect(spyStoreDispatch).toHaveBeenCalledWith({ type: 'BAJA_START' });
+    expect(spyStoreDispatch).toHaveBeenCalledWith({ type: 'DOWN_START' });
   });
 });

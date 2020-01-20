@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import subeBajaReducer from './sube-baja/sube-baja.reducer';
+import upDownReducer from './up-down/up-down.reducer';
 
-const rootReducer = combineReducers({ subeBaja: subeBajaReducer });
+const rootReducer = combineReducers({ upDown: upDownReducer });
 
 export default rootReducer;
