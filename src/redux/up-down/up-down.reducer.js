@@ -6,7 +6,7 @@ const INITIAL_STATE = {
   error: null,
 };
 
-const subeBajaReducer = (state = INITIAL_STATE, action) => {
+const upDownReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case UpDownActionTypes.DOWN_START:
     case UpDownActionTypes.UP_START:
@@ -44,4 +44,4 @@ const subeBajaReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default subeBajaReducer;
+export default upDownReducer;

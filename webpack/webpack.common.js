@@ -78,7 +78,7 @@ module.exports = {
   },
   resolve: {
     modules: ['src', 'node_modules'],
-    extensions: ['*', '.js', '.jsx', '.css', '.scss', 'less'],
+    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
   },
   plugins: [
     new webpack.ProgressPlugin(),

@@ -1,5 +1,5 @@
 import { takeLatest, put, call, all } from 'redux-saga/effects';
-import SubeBajaActionTypes from './up-down.types';
+import UpDownActionTypes from './up-down.types';
 
 import {
   downSuccess,
@@ -40,7 +40,7 @@ describe('up saga', () => {
   it('should trigger on UP_START', () => {
     const generator = onGetUpStart();
     expect(generator.next().value).toEqual(
-      takeLatest(SubeBajaActionTypes.UP_START, up),
+      takeLatest(UpDownActionTypes.UP_START, up),
     );
   });
 });
@@ -67,12 +67,12 @@ describe('down saga', () => {
   it('should trigger on DOWN_START', () => {
     const generator = onGetDownStart();
     expect(generator.next().value).toEqual(
-      takeLatest(SubeBajaActionTypes.DOWN_START, down),
+      takeLatest(UpDownActionTypes.DOWN_START, down),
     );
   });
 });
 
-describe('upBajaSagas', () => {
+describe('upDownSagas', () => {
   it('calls `all()` with the correct functions', () => {
     const generator = upDownSagas();
     expect(generator.next().value).toEqual(
