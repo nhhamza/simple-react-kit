@@ -1,5 +1,7 @@
 import { takeLatest, put, all, call } from 'redux-saga/effects';
 
+//  import api from '../../api/api';
+
 import SubeBajaActionTypes from './sube-baja.types';
 
 import {
@@ -13,6 +15,7 @@ import {
 
 export function* sube() {
   try {
+    //  const { data } = yield call(api.getStart);
     yield put(subeSuccess());
   } catch (error) {
     yield put(subeFailure(error));
