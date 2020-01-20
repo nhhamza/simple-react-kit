@@ -1,10 +1,11 @@
 import React from 'react';
-import HelloWorld from '../../components/helloWorld/HelloWorld.component';
+import { Button, DatePicker } from 'antd';
+import classNames from './style.scss';
 
 const Home = () => (
-  <div>
-    Home
-    <HelloWorld />
+  <div className={classNames}>
+    <Button type="primary">PRESS ME</Button>
+    <DatePicker />
   </div>
 );
 export default Home;

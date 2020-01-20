@@ -24,6 +24,11 @@ module.exports = function(api) {
 
     // Stage 2 https://github.com/babel/babel/tree/master/packages/babel-preset-stage-2
     ['@babel/plugin-proposal-decorators', { legacy: true }],
+    [
+      'import',
+      { libraryName: 'antd', libraryDirectory: 'lib', style: true },
+      'ant',
+    ],
     '@babel/plugin-proposal-function-sent',
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-numeric-separator',
