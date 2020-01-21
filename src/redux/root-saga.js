@@ -1,7 +1,7 @@
 import { all, call } from 'redux-saga/effects';
-import { subeBajaSagas } from './sube-baja/sube-baja.sagas';
+import { upDownSagas } from './up-down/up-down.sagas';
 import { searchResultsSagas } from './search/search.sagas';
 
 export default function* rootSaga() {
-  yield all([call(subeBajaSagas), call(searchResultsSagas)]);
+  yield all([call(upDownSagas), call(searchResultsSagas)]);
 }

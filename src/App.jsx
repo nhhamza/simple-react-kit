@@ -4,11 +4,9 @@ import Header from './components/header/Header';
 import Home from './containers/home/Home';
 import About from './containers/about/About';
 import Users from './containers/users/Users';
-import 'antd/dist/antd.css';
-import classNames from './styles/aplication.scss';
 
 const App = () => (
-  <div className={classNames.container}>
+  <div>
     <Header />
     <Switch>
       <Route exact path="/" component={Home} />

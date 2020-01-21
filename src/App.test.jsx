@@ -11,7 +11,7 @@ describe('<App />', () => {
   const mockStore = configureStore([]);
 
   const store = mockStore({
-    subeBaja: {
+    upDown: {
       number: 0,
       isLoading: false,
       error: null,

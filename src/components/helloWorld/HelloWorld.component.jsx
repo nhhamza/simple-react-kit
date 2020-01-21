@@ -2,34 +2,34 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
-import { subeStart, bajaStart } from '../../redux/sube-baja/sube-baja.actions';
-import { selectSubeBajaNumber } from '../../redux/sube-baja/sube-baja.selectors';
+import { upStart, downStart } from '../../redux/up-down/up-down.actions';
+import { selectUpDownNumber } from '../../redux/up-down/up-down.selectors';
+import t from '../../constants/translates';
 
-const HelloWorld = ({ subeStart, bajaStart, number }) => (
+const HelloWorld = ({ upStart, downStart, number }) => (
   <>
-    <p>Tipico sube baja número</p>
-    <h1>NUMERO: {number}</h1>
-    <button className="button button__sube" type="button" onClick={subeStart}>
+    <p>{t.formatString(t.counter.numbers, { number })}</p>
+    <button className="button button__up" type="button" onClick={upStart}>
       +1
     </button>
-    <button className="button button__baja" type="button" onClick={bajaStart}>
+    <button className="button button__down" type="button" onClick={downStart}>
       -1
     </button>
   </>
 );
 
 HelloWorld.propTypes = {
-  subeStart: PropTypes.func,
-  bajaStart: PropTypes.func,
+  upStart: PropTypes.func,
+  downStart: PropTypes.func,
   number: PropTypes.number,
 };
 const mapStateToProps = createStructuredSelector({
-  number: selectSubeBajaNumber,
+  number: selectUpDownNumber,
 });
 
 const mapDispatchToProps = dispatch => ({
-  subeStart: () => dispatch(subeStart()),
-  bajaStart: () => dispatch(bajaStart()),
+  upStart: () => dispatch(upStart()),
+  downStart: () => dispatch(downStart()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HelloWorld);
