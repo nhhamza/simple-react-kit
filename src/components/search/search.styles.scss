@@ -1,0 +1,13 @@
+.search {
+  width: 100%;
+  > div {
+    width: 100%;
+  }
+}
+
+.search__spinner {
+  position: relative;
+  z-index: 9999;
+  text-align: center;
+  top: 10px;
+}
