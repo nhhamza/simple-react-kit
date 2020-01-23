@@ -8,7 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
     "test": "jest --watchAll",
-    "test --coverage": "jest --watchAll --coverage",
+    "test:coverage": "jest --watchAll --coverage",
     "server": "nodemon server.js",
     "local": "concurrently --kill-others-on-fail \"npm run server\" \"npm start\""
   },
@@ -49,6 +49,17 @@
       "json",
       "jsx",
       "less"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.jsx",
+      "src/**/*.js",
+      "!src/index.jsx",
+      "!src/constants/**",
+      "!src/styles/**",
+      "!src/redux/root-reducer.js",
+      "!src/redux/root-saga.js",
+      "!src/redux/store.js",
+      "!src/api/api.conf.jsx"
     ]
   },
   "repository": "",

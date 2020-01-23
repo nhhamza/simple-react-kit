@@ -12,8 +12,6 @@ import { fetchSearchResultsStart } from '../../redux/search/search.actions';
 
 import Search from '../../components/search/search.component';
 
-import classNames from './style.scss';
-
 const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
   const onSearch = text => {
     if (text.length >= 3) {
@@ -21,7 +19,7 @@ const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
     }
   };
   return (
-    <div className={classNames}>
+    <div>
       <Button type="primary">PRESS ME</Button>
       <DatePicker />
       <Search
