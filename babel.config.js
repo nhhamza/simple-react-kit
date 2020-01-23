@@ -40,13 +40,6 @@ module.exports = function(api) {
     '@babel/plugin-proposal-json-strings',
   ];
 
-  if (babelEnv !== 'test') {
-    plugins.push([
-      'import',
-      { libraryName: 'antd', libraryDirectory: 'lib', style: true },
-      'ant',
-    ]);
-  }
   if (babelEnv === 'production') {
     plugins.push(['@babel/plugin-transform-react-inline-elements']);
   }
