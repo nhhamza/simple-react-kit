@@ -12,7 +12,7 @@ const HelloWorld = ({ upStart, downStart, number }) => (
     <p>{t.formatString(t.counter.numbers, { number })}</p>
     <Button
       variant="contained"
-      color="secundary"
+      color="secondary"
       className="button button__up"
       type="button"
       onClick={upStart}
