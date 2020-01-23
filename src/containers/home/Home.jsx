@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
-import { Button, DatePicker } from 'antd';
 
 import {
   selectSearchPredictiveResults,
@@ -14,14 +13,12 @@ import Search from '../../components/search/search.component';
 
 const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
   const onSearch = text => {
-    if (text.length >= 3) {
-      fetchSearchResults(text);
+    if (text.target.value.length >= 3) {
+      fetchSearchResults(text.target.value);
     }
   };
   return (
     <div>
-      <Button type="primary">PRESS ME</Button>
-      <DatePicker />
       <Search
         predictiveResults={predictiveResults}
         onSearchHandler={onSearch}
