@@ -1,46 +1,69 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
-import { AutoComplete } from 'antd';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+
 import Search from './search.component';
 
 describe('Search component', () => {
   const MOCK_PROPS = {
     onSearchHandler: jest.fn(),
-    predictiveResults: [],
+    predictiveResults: [{ title: 'valencia', id: '1' }],
     isLoading: false,
+    onChangeSelectHandler: jest.fn(),
+    onChangeHandler: jest.fn(),
   };
 
-  const wrapper = shallow(<Search {...MOCK_PROPS} />);
+  const wrapper = mount(<Search {...MOCK_PROPS} />);
 
   it('should render search component', () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
-  it('should show spinner when isLoading is true', () => {
-    const MOCK_PROPS = {
-      onSearchHandler: jest.fn(),
-      predictiveResults: [],
-      isLoading: true,
-    };
-
-    const newWrapper = shallow(<Search {...MOCK_PROPS} />);
-    expect(newWrapper.find('.search__spinner').exists()).toBeTruthy();
+  it('should call onChangeSelectHandler when user writes in textfield', () => {
+    const MOCK_OPTIONS = [{ title: 'valencia', id: '1' }];
+    wrapper.find(Autocomplete).props().options = MOCK_OPTIONS;
+    wrapper
+      .find(Autocomplete)
+      .props()
+      .onChange('val');
+    expect(MOCK_PROPS.onChangeSelectHandler).toHaveBeenCalled();
   });
 
-  it('should set data source to empty array when isLoading is true', () => {
-    const EXPECTED_RESULT = [];
+  it('should call onChangeHandler when user writes in textfield', () => {
+    const MOCK_EVENT_VALUE = { target: { value: 'val' } };
+    wrapper
+      .find(TextField)
+      .props()
+      .onChange(MOCK_EVENT_VALUE);
+    expect(MOCK_PROPS.onChangeHandler).toHaveBeenCalledWith(
+      MOCK_EVENT_VALUE.target.value,
+    );
+  });
 
+  it('should get title from predictiveResults in getOptionLabel', () => {
+    const EXPECTED_RESPONSE = 'valencia';
+    const EXPECTED_OPTION_LABEL = { title: 'valencia', id: '1' };
+    expect(
+      wrapper
+        .find(Autocomplete)
+        .props()
+        .getOptionLabel(EXPECTED_OPTION_LABEL),
+    ).toEqual(EXPECTED_RESPONSE);
+  });
+
+  it('should put empty array when in options when isLoading is true', () => {
     const MOCK_PROPS = {
       onSearchHandler: jest.fn(),
-      predictiveResults: ['Valencia', 'Alicante'],
+      predictiveResults: { title: 'valencia', id: '1' },
       isLoading: true,
+      onChangeSelectHandler: jest.fn(),
+      onChangeHandler: jest.fn(),
     };
 
-    const newWrapper = shallow(<Search {...MOCK_PROPS} />);
+    const newWrapper = mount(<Search {...MOCK_PROPS} />);
 
-    expect(newWrapper.find(AutoComplete).props().dataSource).toEqual(
-      EXPECTED_RESULT,
-    );
+    expect(newWrapper.find(Autocomplete).props().options).toEqual([]);
   });
 });

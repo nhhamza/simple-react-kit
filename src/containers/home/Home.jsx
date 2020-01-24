@@ -12,17 +12,24 @@ import { fetchSearchResultsStart } from '../../redux/search/search.actions';
 import Search from '../../components/search/search.component';
 
 const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
-  const onSearch = text => {
-    if (text.target.value.length >= 3) {
-      fetchSearchResults(text.target.value);
+  const onChangeHandler = text => {
+    if (text.length >= 3) {
+      fetchSearchResults(text);
+    }
+  };
+
+  const onChangeSelectHandler = text => {
+    if (text.title.length >= 3) {
+      fetchSearchResults(text.title);
     }
   };
   return (
     <div>
       <Search
         predictiveResults={predictiveResults}
-        onSearchHandler={onSearch}
+        onChangeHandler={onChangeHandler}
         isLoading={isLoading}
+        onChangeSelectHandler={onChangeSelectHandler}
       />
     </div>
   );

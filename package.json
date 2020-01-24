@@ -51,15 +51,16 @@
       "less"
     ],
     "collectCoverageFrom": [
-      "src/**/*.jsx",
-      "src/**/*.js",
+      "src/**/*.{js,jsx}",
       "!src/index.jsx",
       "!src/constants/**",
       "!src/styles/**",
       "!src/redux/root-reducer.js",
       "!src/redux/root-saga.js",
       "!src/redux/store.js",
-      "!src/api/api.conf.jsx"
+      "!src/api/api.conf.jsx",
+      "!src/redux/up-down/**",
+      "!src/components/helloWorld/**"
     ]
   },
   "repository": "",

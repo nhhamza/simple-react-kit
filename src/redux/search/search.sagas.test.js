@@ -47,7 +47,7 @@ describe('Search sagas', () => {
     const generator = onFetchSearchResultsStart();
     expect(generator.next().value).toEqual(
       debounce(
-        100,
+        300,
         SearchActionTypes.FETCH_SEARCH_RESULTS_START,
         fetchSearchResults,
       ),

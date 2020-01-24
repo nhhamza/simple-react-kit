@@ -19,7 +19,7 @@ export function* fetchSearchResults({ payload: text }) {
 
 export function* onFetchSearchResultsStart() {
   yield debounce(
-    100,
+    300,
     SearchActionTypes.FETCH_SEARCH_RESULTS_START,
     fetchSearchResults,
   );
