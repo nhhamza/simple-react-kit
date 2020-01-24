@@ -5,7 +5,6 @@ import configureStore from 'redux-mock-store';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import HelloWorld from './components/helloWorld/HelloWorld.component';
 
 describe('<App />', () => {
   const mockStore = configureStore([]);
@@ -13,6 +12,11 @@ describe('<App />', () => {
   const store = mockStore({
     upDown: {
       number: 0,
+      isLoading: false,
+      error: null,
+    },
+    search: {
+      predictiveResults: [],
       isLoading: false,
       error: null,
     },
@@ -28,9 +32,5 @@ describe('<App />', () => {
 
   it('renders', () => {
     expect(wrapper.exists()).toBeTruthy();
-  });
-
-  it('contains HelloWorld component', () => {
-    expect(wrapper.find(HelloWorld).exists()).toBeTruthy();
   });
 });
