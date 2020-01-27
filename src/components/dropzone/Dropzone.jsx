@@ -1,6 +1,5 @@
 import React from 'react';
 import { DropzoneArea } from 'material-ui-dropzone';
-import { makeStyles } from '@material-ui/core';
 import style from './style.scss';
 import { acceptedFiles } from '../../constants/ui.constants';
 import t from '../../constants/translates';

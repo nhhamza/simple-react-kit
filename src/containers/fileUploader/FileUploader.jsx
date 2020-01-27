@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
 import { Button } from '@material-ui/core';
 import Dropzone from '../../components/dropzone/Dropzone';
 import t from '../../constants/translates';
-import { selectedFiles } from '../../redux/file-uploader/fileUploader.selectors';
 import { addFiles } from '../../redux/file-uploader/fileUploader.actions';
 
-const FileUploader = ({ getSelectedFiles, addFiles }) => {
+const FileUploader = ({ addFiles }) => {
   const [files, setFiles] = useState([]);
 
   const addFilesHandler = () => {
@@ -50,15 +48,10 @@ const FileUploader = ({ getSelectedFiles, addFiles }) => {
 
 FileUploader.propTypes = {
   addFiles: PropTypes.func,
-  getSelectedFiles: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
 };
-
-const mapStateToProps = createStructuredSelector({
-  getSelectedFiles: selectedFiles,
-});
 
 const mapDispatchToProps = dispatch => ({
   addFiles: files => dispatch(addFiles(files)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(FileUploader);
+export default connect({}, mapDispatchToProps)(FileUploader);

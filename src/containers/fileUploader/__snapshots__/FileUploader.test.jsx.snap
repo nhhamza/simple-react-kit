@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FileUploader /> renders 1`] = `
+<div>
+  <div
+    aria-disabled={false}
+    className="dropzone DropzoneArea-dropZone-2"
+    onClick={[Function]}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="DropzoneArea-dropzoneTextStyle-5"
+    >
+      <p
+        className="DropzoneArea-dropzoneParagraph-7 paragraph"
+      >
+        Glissez vos média ici  ou  Seletionnnez   des fichiers
+      </p>
+      <svg
+        aria-hidden="true"
+        className="MuiSvgIcon-root DropzoneArea-uploadIconSize-6"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path
+          d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+        />
+      </svg>
+    </div>
+    <input
+      accept="image/*,video/*,application/*"
+      autoComplete="off"
+      disabled={false}
+      multiple={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "opacity": 0.00001,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="file"
+    />
+  </div>
+  <br />
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-contained button button__up MuiButton-containedSecondary"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      Suivant
+    </span>
+  </button>
+</div>
+`;

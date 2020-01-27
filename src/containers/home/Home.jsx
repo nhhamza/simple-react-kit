@@ -8,7 +8,6 @@ import {
 } from '../../redux/search/search.selectors';
 import { fetchSearchResultsStart } from '../../redux/search/search.actions';
 import Search from '../../components/search/search.component';
-import FileUploader from '../fileUploader/FileUploader';
 
 const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
   const onChangeHandler = text => {
@@ -24,7 +23,6 @@ const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
   };
   return (
     <div>
-      <FileUploader />
       <Search
         predictiveResults={predictiveResults}
         onChangeHandler={onChangeHandler}
