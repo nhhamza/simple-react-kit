@@ -11,5 +11,9 @@ export default new LocalizedStrings({
     counter: {
       numbers: 'Numbers: {number}',
     },
+    fileUploader: {
+      textAreaDescription:
+        'Glissez vos média ici  ou  Seletionnnez   des fichiers',
+    },
   },
 });
