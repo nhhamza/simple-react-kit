@@ -8,7 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "format": "prettier --write 'packages/**/*.js'",
     "test": "jest --watchAll",
-    "test --coverage": "jest --watchAll --coverage",
+    "test:coverage": "jest --watchAll --coverage",
     "server": "nodemon server.js",
     "local": "concurrently --kill-others-on-fail \"npm run server\" \"npm start\""
   },
@@ -32,7 +32,7 @@
     ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js",
-      "\\.(jpg|gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js",
       "^styled-components$": "<rootDir>/node_modules/styled-components"
     },
     "transform": {
