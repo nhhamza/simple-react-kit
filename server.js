@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 const compression = require('compression');
+const autocompleteSearchResults = require('./__mocks__/autocomplete-search-results.json');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -25,9 +26,15 @@ app.listen(port, error => {
   if (error) throw error;
 });
 
-app.get('/api/GetStart', (req, res) => {
-  setTimeout(
-    () => res.status(200).send(JSON.stringify({ message: 'ok' })),
-    1000,
-  );
+app.get('/api/getSearchResults', (req, res) => {
+  const test = req.query.text;
+
+  const findElements = test =>
+    autocompleteSearchResults.response.filter(
+      element => element.title.toLowerCase().indexOf(test.toLowerCase()) > -1,
+    );
+
+  const result = findElements(test);
+
+  setTimeout(() => res.status(200).send(JSON.stringify(result)), 1000);
 });

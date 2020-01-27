@@ -9,6 +9,11 @@ class API {
     this.http = axios;
   }
 
-  getStart = () => this.http.get(`GetStart`);
+  getSearchResults = text =>
+    this.http.get(`getSearchResults`, {
+      params: {
+        text,
+      },
+    });
 }
 export default new API();

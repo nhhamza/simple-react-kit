@@ -1,5 +1,53 @@
 import React from 'react';
-import HelloWorldComponent from '../../components/helloWorld/HelloWorld.component';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import PropTypes from 'prop-types';
 
-const Home = () => <HelloWorldComponent />;
-export default Home;
+import {
+  selectSearchPredictiveResults,
+  selectSearchIsLoading,
+} from '../../redux/search/search.selectors';
+import { fetchSearchResultsStart } from '../../redux/search/search.actions';
+
+import Search from '../../components/search/search.component';
+
+const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
+  const onChangeHandler = text => {
+    if (text.length >= 3) {
+      fetchSearchResults(text);
+    }
+  };
+
+  const onChangeSelectHandler = text => {
+    if (text.title.length >= 3) {
+      fetchSearchResults(text.title);
+    }
+  };
+  return (
+    <div>
+      <Search
+        predictiveResults={predictiveResults}
+        onChangeHandler={onChangeHandler}
+        isLoading={isLoading}
+        onChangeSelectHandler={onChangeSelectHandler}
+      />
+    </div>
+  );
+};
+
+Home.propTypes = {
+  fetchSearchResults: PropTypes.func,
+  predictiveResults: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string])),
+  isLoading: PropTypes.bool,
+};
+
+const mapStateToProps = createStructuredSelector({
+  predictiveResults: selectSearchPredictiveResults,
+  isLoading: selectSearchIsLoading,
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchSearchResults: text => dispatch(fetchSearchResultsStart(text)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

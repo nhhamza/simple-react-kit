@@ -21,6 +21,7 @@ const theme = createMuiTheme({
         fontSize: 18,
       },
     },
+
     MuiButton: {
       // Name of the rule
       text: {
@@ -47,6 +48,7 @@ const theme = createMuiTheme({
       contrastText: '#ffcc00',
     },
   },
+
   status: {
     danger: 'orange',
   },
