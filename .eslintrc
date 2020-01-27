@@ -8,6 +8,7 @@
     "window": true,
     "jQuery": true,
     "$": true,
+    "@": true,
     "localStorage": true,
     "fetch": true
   },
