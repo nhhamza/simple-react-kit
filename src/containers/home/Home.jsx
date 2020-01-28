@@ -2,13 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import PropTypes from 'prop-types';
-
 import {
   selectSearchPredictiveResults,
   selectSearchIsLoading,
 } from '../../redux/search/search.selectors';
 import { fetchSearchResultsStart } from '../../redux/search/search.actions';
-
 import Search from '../../components/search/search.component';
 import Gallery from '../gallery/gallery';
 
