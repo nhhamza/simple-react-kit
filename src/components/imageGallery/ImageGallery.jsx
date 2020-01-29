@@ -9,6 +9,7 @@ const PREFIX_URL =
   'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
 
 class Gallery extends React.Component {
+  // TODO: CHANGE TO STATELESS COMPONENT AND DO TESTS.
   constructor() {
     super();
     this.state = {
@@ -16,14 +17,13 @@ class Gallery extends React.Component {
       slideInterval: 2000,
       showVideo: {},
     };
-
+    this.onSlide = this.onSlide.bind(this);
     this.images = [
       {
         thumbnail: `${PREFIX_URL}4v.jpg`,
         original: `${PREFIX_URL}4v.jpg`,
         embedUrl:
           'https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0',
-        description: 'Render custom slides within the gallery',
         renderItem: this.renderVideo.bind(this),
       },
       {
@@ -45,7 +45,6 @@ class Gallery extends React.Component {
         thumbnail: `${PREFIX_URL}1t.jpg`,
         originalClass: 'featured-slide',
         thumbnailClass: 'featured-thumb',
-        description: 'Custom class for slides & thumbnails',
       },
     ];
   }
@@ -59,7 +58,7 @@ class Gallery extends React.Component {
   }
 
   toggleShowVideo(url) {
-    this.state.showVideo[url] = !Boolean(this.state.showVideo[url]);
+    this.state.showVideo[url] = !this.state.showVideo[url];
     this.setState({
       showVideo: this.state.showVideo,
     });
@@ -97,9 +96,8 @@ class Gallery extends React.Component {
   render() {
     return (
       <ImageGallery
-        ref={i => (this.imageGallery = i)}
         items={this.images}
-        onSlide={this.onSlide.bind(this)}
+        onSlide={() => this.onSlide()}
         showBullets={false}
         showFullscreenButton={false}
         showPlayButton={false}

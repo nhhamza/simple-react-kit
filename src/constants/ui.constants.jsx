@@ -1,1 +1,1 @@
-export const acceptedFiles = ['image/*', 'video/*', 'application/*'];
+export const acceptedFiles = ['image/*', 'video/*'];
