@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureStore from 'redux-mock-store';
 
-import Search from '../../components/search/search.component';
+import Search from '../../components/search/search.jsx';
 
 import Home from './Home';
 

@@ -19,5 +19,8 @@ export default new LocalizedStrings({
     counter: {
       numbers: 'Numbers: {number}',
     },
+    listCategories: {
+      tittle: 'CATÉGORIES',
+    },
   },
 });

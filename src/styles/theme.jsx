@@ -10,13 +10,13 @@ const theme = createMuiTheme({
   },
 
   typography: {
-    fontFamily: 'NeoSans',
+    fontFamily: 'Avenir Next LT Pro',
     fontSize: 12,
   },
   overrides: {
     MuiTypography: {
       body1: {
-        fontFamily: 'Neo Sans Pro',
+        fontFamily: 'Avenir Next LT Pro',
         fontWeight: 500,
         fontSize: 18,
       },
@@ -33,6 +33,11 @@ const theme = createMuiTheme({
         height: 48,
         padding: '0 30px',
         boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      },
+    },
+    MuiIconButton: {
+      root: {
+        borderRadius: 0,
       },
     },
   },

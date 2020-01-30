@@ -5,32 +5,25 @@
   margin-top: initial;
 }
 
-.menu_tittle {
+.menu__tittle {
+  font-family: 'Neo Sans Pro';
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
   margin: 13px;
 }
 
-.rightToolbar {
+.menu__rightToolbar {
   margin-left: auto;
 }
 
-.buttonGrease {
+.menu__button--grease {
   background-color: #4e5360;
   display: inline-block;
 }
 
-.textWhite {
+.menu__text--white {
   color: #ffffff;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.textUser {
-  font-size: 10px;
-}
-
-.leftMargin {
-  margin-left: 15px;
 }

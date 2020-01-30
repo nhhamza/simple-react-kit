@@ -1,4 +1,4 @@
-.container {
+.footer__container {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -6,18 +6,19 @@
   background-color: #4e5360;
   color: white;
 
-  .footerText {
+  .footer__text {
     color: #ffffff;
     font-size: 16px;
-    padding: 22px;
+    padding: 16px;
     padding-left: 51px;
+    padding-right: 51px;
     display: flex;
 
-    .alignCenter {
+    .footer__text--alignCenter {
       text-align: center;
     }
 
-    .alignRight {
+    .footer__text--alignRight {
       text-align: right;
     }
   }
