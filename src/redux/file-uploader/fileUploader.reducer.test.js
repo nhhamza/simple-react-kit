@@ -10,11 +10,12 @@ describe('fileUploader', () => {
     expect(fileUploaderReducer(undefined, {})).toEqual(INITIAL_STATE);
   });
   it('should set payload with added files', () => {
-    const MOCK = { files: [] };
+    const MOCK = { files: [{}] };
+
     expect(
       fileUploaderReducer(INITIAL_STATE, {
         type: fileUploader.ADD_FILES,
-        payload: MOCK,
+        payload: [{}],
       }),
     ).toStrictEqual(MOCK);
   });
