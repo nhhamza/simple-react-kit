@@ -1,6 +1,9 @@
 import { JSDOM } from 'jsdom';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import 'core-js-pure/stable';
+import 'regenerator-runtime/runtime';
+import 'babel-polyfill';
 
 configure({ adapter: new Adapter() });
 global.fetch = require('jest-fetch-mock');
