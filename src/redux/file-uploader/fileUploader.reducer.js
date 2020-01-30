@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 const fileUploaderReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FileUploader.ADD_FILES:
-      return { ...state };
+      return { ...state, files: action.payload };
     default:
       return state;
   }

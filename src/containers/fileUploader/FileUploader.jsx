@@ -32,7 +32,6 @@ const FileUploader = ({ addFiles }) => {
         dropzoneText={t?.fileUploader.textAreaDescription}
       />
       <br />
-      <p> {files} </p>
       <Button
         variant="contained"
         color="secondary"
