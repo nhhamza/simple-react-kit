@@ -1,7 +1,8 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
-import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
+import { mount } from 'enzyme';
+import { Button } from '@material-ui/core';
 import FileUploader from './FileUploader';
 
 describe('<FileUploader />', () => {
@@ -14,21 +15,33 @@ describe('<FileUploader />', () => {
     },
   });
 
-  const component = renderer.create(
+  const MOCK_PROPS = {
+    handleChange: jest.fn(),
+    handleSave: jest.fn(),
+  };
+
+  const spyStoreDispatch = jest.spyOn(store, 'dispatch');
+  const component = mount(
     <Provider store={store}>
-      <FileUploader />
+      <FileUploader {...MOCK_PROPS} />
     </Provider>,
   );
 
   it('renders', () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(component.exists()).toMatchSnapshot();
   });
 
   it('should dispatch an action on button click', () => {
-    renderer.act(() => {
-      component.root.findByType('button').props.onClick();
+    component
+      .find(Button)
+      .props()
+      .onClick();
+
+    expect(spyStoreDispatch).toHaveBeenCalledWith({
+      type: 'ADD_FILES',
+      payload: [],
     });
-    expect(store.dispatch).toHaveBeenCalledTimes(1);
-    expect(store.dispatch).toHaveBeenCalled();
   });
+
+  // todo:@Hamza add test for funcionality when is finished.
 });
