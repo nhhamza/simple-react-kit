@@ -7,7 +7,7 @@ import About from './containers/about/About';
 import Users from './containers/users/Users';
 
 const App = () => (
-  <div>
+  <>
     <Header />
     <Switch>
       <Route exact path="/" component={Home} />
@@ -15,7 +15,7 @@ const App = () => (
       <Route path="/users" component={Users} />
     </Switch>
     <Footer />
-  </div>
+  </>
 );
 
 export default App;
