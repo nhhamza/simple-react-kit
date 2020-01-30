@@ -13,7 +13,7 @@
     "local": "concurrently --kill-others-on-fail \"npm run server\" \"npm start\""
   },
   "lint-staged": {
-    "*.{js,jsx,scss,css,md}": [
+    "*.{js,jsx,md}": [
       "prettier --write --single-quote",
       "eslint --fix",
       "git add"
