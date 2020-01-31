@@ -21,6 +21,7 @@ const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
       fetchSearchResults(text.title);
     }
   };
+
   return (
     <div>
       <Search
