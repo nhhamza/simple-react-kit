@@ -13,13 +13,13 @@ import './style.scss';
 
 const Header = () => {
   const userName = 'GILES'; // TODO:@JAVI: change for state user name
-  const header = (
+  return (
     <div>
       <AppBar position="static">
         <Toolbar disableGutters>
           <img src={logo} alt="logo" className="menu__logo" />
           <p className="menu__tittle">{texts.header.menuTittle}</p>
-          <section className="menu__rightToolbar">
+          <section className="menu__toolbar--right">
             <IconButton color="inherit" aria-label="menu">
               <PersonOutlineOutlinedIcon style={styles.iconStyle} />
               <Typography style={styles.userText}>
@@ -27,7 +27,7 @@ const Header = () => {
               </Typography>
               <KeyboardArrowDownOutlinedIcon />
             </IconButton>
-            <section className="menu__button--grease">
+            <section className="menu__button--gray">
               <IconButton color="inherit" aria-label="menu">
                 <AppsIcon style={styles.iconStyleWhite} />
                 <Typography variant="body1" className="menu__text--white">
@@ -40,6 +40,5 @@ const Header = () => {
       </AppBar>
     </div>
   );
-  return header;
 };
 export default Header;

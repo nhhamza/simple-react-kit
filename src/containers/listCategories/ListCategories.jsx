@@ -25,8 +25,6 @@ const ListCategories = () => {
         </Grid>
         <Grid item xs className="alignCenter">
           <CardComponent
-            isCategory
-            title="Perspective exterieure"
             subTitle="00019 - Emile Ripert"
             description="Lille"
             alt="Contemplative Reptile"

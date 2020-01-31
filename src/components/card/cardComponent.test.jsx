@@ -37,6 +37,6 @@ describe('<CardComponent />', () => {
         .find(Typography)
         .first()
         .text(),
-    ).toEqual('Perspective exterieure');
+    ).toEqual(MOCK_PROP.title);
   });
 });

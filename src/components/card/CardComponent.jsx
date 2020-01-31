@@ -52,9 +52,11 @@ const CardComponent = ({
             </Typography>
           ) : (
             <>
-              <Typography gutterBottom className={classes.cardTitle}>
-                {title}
-              </Typography>
+              {title?.length > 0 && (
+                <Typography gutterBottom className={classes.cardTitle}>
+                  {title}
+                </Typography>
+              )}
               <Typography gutterBottom className={classes.subTitle}>
                 {subTitle}
               </Typography>
