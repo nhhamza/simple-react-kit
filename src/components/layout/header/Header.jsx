@@ -14,7 +14,7 @@ import styles from './style.jsx';
 const Header = () => {
   const userName = 'GILES'; // TODO:@JAVI: change for state user name
   const h = (
-    <div>
+    <div className="header">
       <AppBar position="static">
         <Toolbar disableGutters>
           <img src={logo} alt="logo" className={classNames.menu__logo} />
