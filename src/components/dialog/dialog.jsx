@@ -40,12 +40,22 @@ const AlertDialogSlide = ({
 
         <DialogActions>
           {textButtonOk?.length > 0 && (
-            <Button onClick={handleClose} variant="outlined" color="primary">
+            <Button
+              onClick={handleClose}
+              id="ButtonOK"
+              variant="outlined"
+              color="primary"
+            >
               {textButtonOk}
             </Button>
           )}
           {textButtonCancel?.length > 0 && (
-            <Button onClick={handleClose} variant="outlined" color="primary">
+            <Button
+              onClick={handleClose}
+              id="ButtonKO"
+              variant="outlined"
+              color="primary"
+            >
               {textButtonCancel}
             </Button>
           )}
