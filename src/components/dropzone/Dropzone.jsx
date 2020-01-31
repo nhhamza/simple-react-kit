@@ -19,7 +19,7 @@ const Dropzone = props => {
     });
   };
   const getDropRejectMessage = file => {
-    return t.formatString(t.fileUploader.fileRemovedMessage, {
+    return t.formatString(t.fileUploader.dropRejectMessage, {
       fileName: file.name,
     });
   };
