@@ -32,7 +32,6 @@ const FileUploader = ({ addFiles }) => {
         dropzoneText={t?.fileUploader.textAreaDescription}
       />
       <br />
-
       <Button
         variant="contained"
         color="secondary"
@@ -54,4 +53,4 @@ const mapDispatchToProps = dispatch => ({
   addFiles: files => dispatch(addFiles(files)),
 });
 
-export default connect({}, mapDispatchToProps)(FileUploader);
+export default connect(null, mapDispatchToProps)(FileUploader);
