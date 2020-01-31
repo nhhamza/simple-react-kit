@@ -8,7 +8,6 @@ import {
 } from '../../redux/search/search.selectors';
 import { fetchSearchResultsStart } from '../../redux/search/search.actions';
 import Search from '../../components/search/search.component';
-import Gallery from '../gallery/gallery';
 
 const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
   const onChangeHandler = text => {
@@ -22,9 +21,9 @@ const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
       fetchSearchResults(text.title);
     }
   };
+
   return (
     <div>
-      <Gallery />
       <Search
         predictiveResults={predictiveResults}
         onChangeHandler={onChangeHandler}
