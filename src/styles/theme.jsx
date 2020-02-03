@@ -23,21 +23,52 @@ const theme = createMuiTheme({
     },
 
     MuiButton: {
-      // Name of the rule
-      text: {
-        // Some CSS
-        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-        borderRadius: 3,
-        border: 0,
-        color: 'black',
+      root: {
+        fontFamily: 'Neo Sans Pro',
+        fontWeight: 500,
+        fontSize: 18,
         height: 48,
-        padding: '0 30px',
-        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+        color: '#4E5360',
+        borderRadius: '10px',
+        '&:hover': {
+          backgroundColor: 'rgb(178, 178, 178)',
+          borderColor: 'rgb(178, 178, 178)',
+          color: '#F5F6FA',
+        },
+      },
+      outlinedPrimary: {
+        color: '#C82832',
+        borderColor: '#C82832',
+        borderStyle: 'solid',
+        borderWidth: 'thin',
+        '&:hover': {
+          backgroundColor: 'rgb(178, 178, 178)',
+          borderColor: 'rgb(178, 178, 178)',
+          color: '#F5F6FA',
+        },
+      },
+      containedPrimary: {
+        backgroundColor: '#C82832',
+        color: '#F5F6FA',
+        '&:hover': {
+          backgroundColor: 'rgb(178, 178, 178)',
+          borderColor: 'rgb(178, 178, 178)',
+          color: '#F5F6FA',
+        },
+      },
+      containedSecondary: {
+        color: '#F5F6FA',
+        backgroundColor: '#4E5360',
+        '&:hover': {
+          backgroundColor: 'rgb(178, 178, 178)',
+          borderColor: 'rgb(178, 178, 178)',
+          color: '#F5F6FA',
+        },
       },
     },
   },
   palette: {
-    type: 'dark',
+    type: 'light',
     primary: {
       main: '#FFFFFF',
     },
