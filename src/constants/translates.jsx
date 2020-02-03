@@ -19,6 +19,9 @@ export default new LocalizedStrings({
     counter: {
       numbers: 'Numbers: {number}',
     },
+    listCategories: {
+      tittle: 'CATÉGORIES',
+    },
     fileUploader: {
       textAreaDescription:
         'Glissez vos média ici  ou  Seletionnnez   des fichiers',

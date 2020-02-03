@@ -9,7 +9,6 @@ import { store } from './redux/store';
 import theme from './styles/theme';
 
 import App from './App.jsx';
-
 import './index.scss';
 
 ReactDOM.render(

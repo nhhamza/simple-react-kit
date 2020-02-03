@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
-import Search from './search.component';
+import Search from './search.jsx';
 
 describe('Search component', () => {
   const MOCK_PROPS = {

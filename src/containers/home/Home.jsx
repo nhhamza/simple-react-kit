@@ -7,7 +7,9 @@ import {
   selectSearchIsLoading,
 } from '../../redux/search/search.selectors';
 import { fetchSearchResultsStart } from '../../redux/search/search.actions';
-import Search from '../../components/search/search.component';
+
+import Search from '../../components/search/search.jsx';
+import ListCategories from '../listCategories/ListCategories.jsx';
 
 const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
   const onChangeHandler = text => {
@@ -30,6 +32,7 @@ const Home = ({ fetchSearchResults, predictiveResults, isLoading }) => {
         isLoading={isLoading}
         onChangeSelectHandler={onChangeSelectHandler}
       />
+      <ListCategories />
     </div>
   );
 };
