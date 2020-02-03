@@ -11,7 +11,6 @@ import texts from '../../../constants/translates';
 import styles from './style.jsx';
 import './style.scss';
 
-
 const Header = () => {
   const userName = 'GILES'; // TODO:@JAVI: change for state user name
   return (
@@ -22,10 +21,7 @@ const Header = () => {
           <p className="menu__tittle">{texts.header.menuTittle}</p>
           <section className="menu__toolbar--right">
             <IconButton color="inherit" aria-label="menu">
-              <PersonOutlineOutlinedIcon
-                SvgIconClassKey="fontSizeInherit"
-                className="iconStyle"
-              />
+              <PersonOutlineOutlinedIcon style={styles.iconStyle} />
               <Typography style={styles.userText}>
                 {texts.formatString(texts.header.welcome, { userName })}
               </Typography>

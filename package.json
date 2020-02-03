@@ -13,7 +13,7 @@
     "local": "concurrently --kill-others-on-fail \"npm run server\" \"npm start\""
   },
   "lint-staged": {
-    "*.{js,jsx,scss,css,md}": [
+    "*.{js,jsx,md}": [
       "prettier --write --single-quote",
       "eslint --fix",
       "git add"
@@ -83,6 +83,7 @@
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "babel-polyfill": "^6.26.0",
     "body-parser": "1.19.0",
+    "classnames": "^2.2.6",
     "compression": "1.7.4",
     "core-js": "3.6.4",
     "cors": "2.8.5",
@@ -99,7 +100,9 @@
     "react-alice-carousel": "^1.17.2",
     "react-dom": "16.12.0",
     "react-hot-loader": "4.12.18",
+    "react-image-gallery": "^1.0.5",
     "react-localization": "^1.0.15",
+    "react-player": "^1.14.2",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
