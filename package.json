@@ -92,7 +92,7 @@
     "express": "4.17.1",
     "install": "^0.13.0",
     "less": "^3.10.3",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "material-ui-dropzone": "^2.4.7",
     "nodemon": "1.19.3",
     "prop-types": "15.7.2",
